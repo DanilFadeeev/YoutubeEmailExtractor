@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeEmailExtractorApi", "YoutubeEmailExtractorApi\YoutubeEmailExtractorApi.csproj", "{A4FFC740-12FD-4D92-8863-F03D1194645F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeEmailExtractorApi", "YoutubeEmailExtractorApi\YoutubeEmailExtractorApi.csproj", "{A4FFC740-12FD-4D92-8863-F03D1194645F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailExtractor", "EmailExtractor\EmailExtractor.csproj", "{278866B0-7C80-4883-A839-02C19E7C43A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailExtractor", "EmailExtractor\EmailExtractor.csproj", "{278866B0-7C80-4883-A839-02C19E7C43A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeApiWrapper", "YouTubeApiWrapper\YouTubeApiWrapper.csproj", "{778828D9-2034-4C6E-881E-303E7F1777BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YouTubeApiWrapper", "YouTubeApiWrapper\YouTubeApiWrapper.csproj", "{778828D9-2034-4C6E-881E-303E7F1777BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeEmailExtractorFrontend", "YoutubeEmailExtractorFrontend\YoutubeEmailExtractorFrontend.csproj", "{3C31EC86-DE0C-4CD8-AE75-93637BC76674}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeEmailExtractorFrontend", "YoutubeEmailExtractorFrontend\YoutubeEmailExtractorFrontend.csproj", "{3C31EC86-DE0C-4CD8-AE75-93637BC76674}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeApiWriterTests", "YouTubeApiWriterTests\YouTubeApiWriterTests.csproj", "{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3C31EC86-DE0C-4CD8-AE75-93637BC76674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C31EC86-DE0C-4CD8-AE75-93637BC76674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C31EC86-DE0C-4CD8-AE75-93637BC76674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
