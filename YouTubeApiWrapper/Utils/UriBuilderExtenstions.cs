@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.String;
 
-namespace YouTubeApiWrapper.Utils
+namespace ApiWrapper.Utils
 {
     /// <summary>
     /// provide useful extentions to simplify creating uris
@@ -31,14 +31,22 @@ namespace YouTubeApiWrapper.Utils
                 throw new ArgumentException("value must be set");
 
             paramName = toUrlNormalString(paramName);
-
             string paramValue = toUrlNormalString(value.ToString());
-
-            if (builder.Query != null && builder.Query.Length > 1)
-                builder.Query = $" {builder.Query.Substring(1)}&{paramName}={paramValue}";
+            if (!IsNullOrEmpty(builder.Query))
+                builder.Query = $"{builder.Query.Substring(1)}&{paramName}={paramValue}";
             else
-                builder.Query = paramName + paramValue;
+                builder.Query = paramName + "=" + paramValue;
 
+            return builder;
+        }
+        /// <summary>
+        /// delete all query params in UriBuilder
+        /// </summary>
+        /// <param name="builder">builder whose query must be cleared</param>
+        /// <returns>same builder with empty query</returns>
+        public static UriBuilder ClearQuery(this UriBuilder builder)
+        {
+            builder.Query = Empty;
             return builder;
         }
         /// <summary>
@@ -50,7 +58,6 @@ namespace YouTubeApiWrapper.Utils
         {
             if (IsNullOrEmpty(input))
                 throw new ArgumentException("value must be set");
-
 
             return input.Replace(" ", "%20")
                 .Replace("\t", "%20")
