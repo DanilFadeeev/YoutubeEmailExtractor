@@ -78,5 +78,15 @@ namespace YouTubeApiWriterTests
 
             Assert.AreEqual(testBuilder.Query, string.Empty);
         }
+        [TestMethod]
+        public void AddKeyMethodCheck()
+        {
+            Assert.AreEqual(string.Empty, testBuilder.Query);
+
+            testBuilder.AddKey();
+
+            Assert.IsTrue(testBuilder.Query.Contains("key="));
+            Assert.IsTrue(testBuilder.Query.Length == 44);
+        }
     }
 }

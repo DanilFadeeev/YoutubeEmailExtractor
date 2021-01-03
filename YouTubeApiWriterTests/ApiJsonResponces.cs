@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace YouTubeApiWrapperTests
 {
+    /// <summary>
+    /// class for boxing different youtube api responces for unit tests
+    /// </summary>
     public static class   ApiJsonResponces
     {
         public static string GetVideoCommentsFirstPage { get; set; } = @"{
@@ -6433,6 +6436,8 @@ namespace YouTubeApiWrapperTests
   ]
 }
 ";
+
+
         public static string videosIdsResponce = @"{
                     ""kind"": ""youtube#searchListResponse"",
                     ""etag"": ""fqM_58mAB9oDnuZgMaI0Whx0qPk"",
@@ -6529,6 +6534,27 @@ namespace YouTubeApiWrapperTests
         ""videoId"": ""sNeBFnYAAXY""
       }
                 }
+  ]
+}
+";
+        public static string GetVideoIdByName { get; set; } = @"{
+  ""kind"": ""youtube#searchListResponse"",
+  ""etag"": ""WV6sXU_arRD_nue1W0hc7Zgkifw"",
+  ""nextPageToken"": ""CAEQAA"",
+  ""regionCode"": ""RU"",
+  ""pageInfo"": {
+    ""totalResults"": 1638,
+    ""resultsPerPage"": 1
+  },
+  ""items"": [
+    {
+      ""kind"": ""youtube#searchResult"",
+      ""etag"": ""Pmyl6Ubonwy4-VqCJW2F3pYV0p8"",
+      ""id"": {
+        ""kind"": ""youtube#video"",
+        ""videoId"": ""bkcMwEcPHDw""
+      }
+}
   ]
 }
 ";

@@ -12,6 +12,17 @@ namespace ApiWrapper.Utils
     /// </summary>
     public static class UriBuilderExtenstions
     {
+
+        /// <summary>
+        /// add youtube api key from environment variable to query params on concrete uri builder
+        /// </summary>
+        /// <param name="builder">builder what query need key parametr</param>
+        /// <returns>same builder with added key in query</returns>
+        public static UriBuilder AddKey(this UriBuilder builder)
+        {
+            builder.AddQueryParam("key", Environment.GetEnvironmentVariable("YouTubeApiKey"));
+            return builder;
+        }
         /// <summary>
         /// Add new parametr to Uri query
         /// </summary>

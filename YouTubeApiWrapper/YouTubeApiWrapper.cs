@@ -20,22 +20,44 @@ namespace ApiWrapper
     {
         public HttpClient Client = new();
         public CancellationTokenSource cancellation = new();
-        public static async Task Main()
+        //public static async Task Main()
+        //{
+        //   var c = new YouTubeApiWrapper().GetVideoIdByName("жизнь обмен денис борисов").Result;
+        //    Console.WriteLine(c);
+        //    //foreach (var i in new YouTubeApiWrapper().GetVideosIdsByChannelId("UCXOzPAwI8ChKpGjRXE4E7ew").Result)
+        //    //    Console.WriteLine(i);
+        //    //new CancellationToken().c
+        //    //var c =  await(await new myClient().SendAsync(new(HttpMethod.Get, "https://google.com"), new CancellationToken())).Content.ReadAsStringAsync();
+        //    //Console.WriteLine(c);
+        //}
+        /// <summary>
+        /// Search most relevant video by name
+        /// </summary>
+        /// <param name="name">video name or keywords to search video</param>
+        /// <returns>video id or null if not found</returns>
+        public async Task<string> GetVideoIdByName(string name)
         {
-           var c = new YouTubeApiWrapper().GetCommentsByVideoId("9sm0lbuEqd8").Result;
-            foreach (var comment in c)
+            //create uri with all query params
+            UriBuilder uriBuilder = new("https://www.googleapis.com/youtube/v3/search");
+            //add params to get videos from api
+            uriBuilder.AddQueryParam("part", "id")
+                .AddQueryParam("maxResults", 1)
+                .AddQueryParam("type", "video")
+                .AddQueryParam("q", name)
+                .AddQueryParam("key", Environment.GetEnvironmentVariable("YoutubeApiKey"));
+            //send request
+            GetVideoIdByNameModel responce;
+            HttpRequestMessage message = new()
             {
-                Console.WriteLine(comment.AuthorName);
-                Console.WriteLine(comment.CommentText);
-                Console.WriteLine();
-            }
-            //foreach (var i in new YouTubeApiWrapper().GetVideosIdsByChannelId("UCXOzPAwI8ChKpGjRXE4E7ew").Result)
-            //    Console.WriteLine(i);
-            //new CancellationToken().c
-            //var c =  await(await new myClient().SendAsync(new(HttpMethod.Get, "https://google.com"), new CancellationToken())).Content.ReadAsStringAsync();
-            //Console.WriteLine(c);
+                Method = HttpMethod.Get,
+                RequestUri = uriBuilder.Uri
+            };
+            var result = await Client.SendAsync(message, cancellation.Token);
+            string json = await result.Content.ReadAsStringAsync();
+            responce = JsonSerializer.Deserialize<GetVideoIdByNameModel>(json);
+            //return id if responce is not null
+            return responce?.items?[0]?.id?.videoId;
         }
-
         /// <summary>
         /// get all videos id of channel id. To get channel id you can use GetChannelIdByName method
         /// </summary>
@@ -120,8 +142,6 @@ namespace ApiWrapper
 
             return comments;
         }
-
-
         /// <summary>
         /// search most popular channel with inserted name
         /// </summary>

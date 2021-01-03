@@ -102,6 +102,22 @@ namespace YouTubeApiWrapperTests
                 return true;
             }
         }
+        //provides typical responce with one video id
+        class VideoIdByNameContent : HttpContent
+        {
+            protected override Task SerializeToStreamAsync(Stream stream, TransportContext context)
+            {
+                var writer = new StreamWriter(stream);
+                writer.Write(ApiJsonResponces.GetVideoIdByName);
+                writer.Flush();
+                return Task.CompletedTask;
+            }
+            protected override bool TryComputeLength(out long length)
+            {
+                length = 0;
+                return true;
+            }
+        }
         public override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             if (request.RequestUri.AbsolutePath == "/youtube/v3/search" && request.RequestUri.Query.Contains("type=channel"))
@@ -110,9 +126,15 @@ namespace YouTubeApiWrapperTests
                 result.RunSynchronously();
                 return result;
             }
-            if (request.RequestUri.AbsolutePath == "/youtube/v3/search" && request.RequestUri.Query.Contains("type=video"))
+            if (request.RequestUri.AbsolutePath == "/youtube/v3/search" && request.RequestUri.Query.Contains("type=video")&&request.RequestUri.Query.Contains("channelId"))
             {
                 Task<HttpResponseMessage> result = new(() => new() { Content = new videoIdsContent() });
+                result.RunSynchronously();
+                return result;
+            }
+            if (request.RequestUri.AbsolutePath == "/youtube/v3/search" && request.RequestUri.Query.Contains("type=video") && request.RequestUri.Query.Contains("q="))
+            {
+                Task<HttpResponseMessage> result = new(() => new() { Content = new VideoIdByNameContent() });
                 result.RunSynchronously();
                 return result;
             }
@@ -171,6 +193,13 @@ namespace YouTubeApiWrapperTests
             Assert.AreEqual(200, result.Count);
             Assert.AreEqual("Роман Воробьев", result[1].AuthorName);
             Assert.AreEqual("Привет, Денис!:)", result[197].CommentText);
+        }
+        [TestMethod]
+        public void GetVideoIdByName()
+        {
+            ApiWrapper.YouTubeApiWrapper wrapper = new() { Client = fakeClient };
+            string result = wrapper.GetVideoIdByName("ted talks how to get up in the morning").Result;
+            Assert.AreEqual("bkcMwEcPHDw", result);
         }
     }
 }
