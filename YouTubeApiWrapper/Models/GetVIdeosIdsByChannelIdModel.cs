@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YouTubeApiWrapper.Models
+namespace ApiWrapper.Models
 {
     public class GetVIdeosIdsByChannelIdModel
     {
@@ -18,7 +18,7 @@ namespace YouTubeApiWrapper.Models
     public class PageInfo
     {
         public int totalResults { get; set; }
-        public int resultPerPage { get; set; }
+        public int resultsPerPage { get; set; }
     }
     public class Item
     {
