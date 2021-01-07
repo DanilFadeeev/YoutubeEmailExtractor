@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/EmailsList.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="hidden" id="test" />
+    <div class="container">
+      <div class="input">
+        <div class="downloadButton">
+          <a href="https://localhost:44395/api/DownloadAllEmails" class="button"
+            ><i class="fa"></i
+          ></a>
+        </div>
+
+        <input type="text" id="videoId" placeholder="insert video id" />
+        <button id="submit" onclick="searchEmails()">Search</button>
+      </div>
+
+      <!-- exaple of email block
+      <div class="email">
+        <span
+          >emailTest@test.test
+          <i
+            class="fa fa-copy"
+            onclick="CopyToClipboard(this.parentElement)"
+          ></i
+        ></span>
+      </div> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/EmailsList.js"></script>
+  </body>
+</html>
