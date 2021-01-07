@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/ChannelVideos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="js/ChannelVideos.js"></script>
+    <input type="hidden" id="test" value="default">
+    <div class="container" >
+
+      <div class="insert">
+        <div class="input">
+          <input type="text" id="channelId" placeholder="Insert channel id" />
+        </div>
+        <button type="submit" onclick="searchVideos()" id="submit">
+          searchosos
+        </button>
+      </div>
+
+  <div class="videoInfo">
+      <div class="image" >
+        <img src="https://www.w3schools.com/w3css/img_lights.jpg" />
+      </div>
+      <div class="text">
+        <span class="videoName">thest name: namename</span>
+        <span class="videoId"
+          >test id: <span>43453466
+            <i
+              class="fa fa-copy"
+              onclick="CopyToClipboard(this.parentElement)"
+            ></i>
+         </span>
+      </div>
+    </div>
+    </div>
+      <script>
+          let input = document.getElementById("channelId");
+          // Execute a function when the user releases a key on the keyboard
+          input.addEventListener("keyup", function (event) {
+              // Number 13 is the "Enter" key on the keyboard
+              if (event.keyCode === 13) {
+                  // Cancel the default action, if needed
+                  event.preventDefault();
+                  // Trigger the button element with a click
+                  document.getElementById("submit").click();
+              }
+          });
+      </script>
+  </body>
+</html>
