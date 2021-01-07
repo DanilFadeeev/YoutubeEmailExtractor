@@ -1,0 +1,130 @@
+.container {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.MainButton {
+  width: 1000px;
+  height: 60px;
+  color: red;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+div.MainButton {
+  display: flex;
+  justify-content: center;
+}
+#BigButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: slidein;
+  animation-duration: 3s;
+  overflow: hidden;
+}
+
+.BigButton2Orange {
+  width: 500px;
+  height: 60px;
+  background-color: orange;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.BigButton2LightGreen {
+  width: 500px;
+  height: 60px;
+  background-color: rgb(160, 255, 16);
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.BigButton2Purple {
+  width: 500px;
+  height: 60px;
+  background-color: purple;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+.BigButton2Blue {
+  width: 500px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+.BigButton2R {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: slideinRight;
+  animation-duration: 3s;
+  overflow: hidden;
+}
+
+.BigButton2L {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: slidein;
+  animation-duration: 3s;
+  overflow: hidden;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 30%;
+    font-size: 0ch;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slideinRight {
+  from {
+    margin-right: 100%;
+    width: 20%;
+    font-size: 0ch;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+i {
+  padding: 10px;
+}
+#about {
+  padding-top: 40px;
+  padding-bottom: 0px;
+  text-align: center;
+  animation-duration: 6.5s;
+  animation-name: aboutMove;
+  margin: 0 auto;
+  font-size: 0.5em;
+  color: rgb(161, 161, 161);
+}
+#test {
+  margin: 0 auto;
+}
+
+@keyframes aboutMove {
+  from {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
+}

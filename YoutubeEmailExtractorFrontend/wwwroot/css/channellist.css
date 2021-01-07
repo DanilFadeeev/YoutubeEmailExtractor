@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+}
+.channelInfo img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-left: 50px;
+  /* vertical-align: bottom */
+  border-radius: 50%;
+}
+.channelInfo p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
+}
+.channelInfo span {
+  font-size: 0.9em;
+  display: inline-block;
+  margin-bottom: 15px;
+
+  float: left;
+}
+
+.channelInfo a {
+  cursor: pointer;
+  font-size: 0.7em;
+}
+.channelInfo a:hover {
+}
+.channelInfo i {
+  cursor: pointer;
+}
+.line {
+  display: inline;
+}
+.channelText {
+  padding-top: 50px;
+  display: inline-block;
+  margin-left: 50px;
+  float: left;
+}
+.channelInfo {
+  margin-top: 50px;
+  margin-bottom: 190px;
+}
+.channelInfo::before {
+  display: inline-block;
+  content: "";
+  border-top: 0.01rem solid rgb(148, 148, 148);
+  width: 100%;
+  margin: 0 1rem;
+  transform: translateY(-1rem);
+}

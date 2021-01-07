@@ -1,0 +1,230 @@
+/* red */
+.glow-on-hover-red {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.glow-on-hover-red:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7e15, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.glow-on-hover-red:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-red:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-red:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/* orange */
+.glow-on-hover-orange {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.glow-on-hover-orange:before {
+  content: "";
+  background: linear-gradient(45deg, #fb7ba2, #fce043, #fb7ba2);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.glow-on-hover-orange:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-orange:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-orange:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
+
+/* green */
+
+.glow-on-hover-green {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.glow-on-hover-green:before {
+  content: "";
+  background: linear-gradient(45deg, #5aff15, #00b712, #5aff15);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.glow-on-hover-green:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-green:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-green:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
+/* purple */
+
+.glow-on-hover-purple {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.glow-on-hover-purple:before {
+  content: "";
+  background: linear-gradient(45deg, #5f72be, #9921e8, #5f72be);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.glow-on-hover-purple:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-purple:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-purple:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
+/* blue */
+.glow-on-hover-blue {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.glow-on-hover-blue:before {
+  content: "";
+  background: linear-gradient(45deg, #009ffd, #2a2a72, #009ffd);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
+  border-radius: 25px;
+}
+
+.glow-on-hover-blue:active:after {
+  background: transparent;
+}
+
+.glow-on-hover-blue:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-blue:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+}
