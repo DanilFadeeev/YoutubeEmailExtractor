@@ -189,10 +189,10 @@ namespace YouTubeApiWrapperTests
         public void GetCommentsByVideoId()
         {
             ApiWrapper.YouTubeApiWrapper wrapper = new() { Client = fakeClient };
-            var result = wrapper.GetCommentsByVideoId("sNWoonYAAXY").Result;
-            Assert.AreEqual(200, result.Count);
+            string a;
+            var result = wrapper.GetCommentsByVideoId("sNWoonYAAXY",out a);
+            Assert.AreEqual(100, result.Count);
             Assert.AreEqual("Роман Воробьев", result[1].AuthorName);
-            Assert.AreEqual("Привет, Денис!:)", result[197].CommentText);
         }
         [TestMethod]
         public void GetVideoIdByName()
