@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ApiWrapper.Models
 {
-    public class Comment
+    public class VideoInfo
     {
-        public string CommentText { get; set; }
-        public string AuthorName { get; set; }
+        public string Id { get; set; }
+        public string ImageAddress { get; set; }
+        public string Title { get; set; }
     }
 }

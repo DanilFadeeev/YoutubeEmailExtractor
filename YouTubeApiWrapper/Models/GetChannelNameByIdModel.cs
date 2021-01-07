@@ -12,21 +12,21 @@ namespace ApiWrapper.Models
         public string etag { get; set; }
         public string nextPageToken { get; set; }
         public string regionCode { get; set; }
-        public PageInfo pageInfo { get; set; }
-        public List<Item> items { get; set; }
+        public chnlPageInfo pageInfo { get; set; }
+        public List<chnlItem> items { get; set; }
     }
-    public class PageInfo
+    public class chnlPageInfo
     {
         public int totalResults { get; set; }
         public int resultsPerPage { get; set; }
     }
-    public class Item
+    public class chnlItem
     {
         public string kind { get; set; }
         public string etag { get; set; }
-        public Id id { get; set; }
+        public chnlId id { get; set; }
     }
-    public class Id
+    public class chnlId
     {
         public string kind { get; set; }
         public string channelId { get; set; }
