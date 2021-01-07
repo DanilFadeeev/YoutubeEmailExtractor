@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/channellist.css" />
+    <link rel="stylesheet" href="hexagon.css" />
+    <link rel="stylesheet" href="css/label.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="insert">
+            <div class="input">
+                <input type="text" id="channelId" placeholder="Insert channel name" />
+            </div>
+            <button type="submit" onclick="searchChannels()" id="submit">
+                searchosos
+            </button>
+        </div>
+    </div>
+    <div id="test">test element</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script src="js/ChannelSearch.js"></script>
+    <script>
+        let input = document.getElementById("channelId");
+        // Execute a function when the user releases a key on the keyboard
+        input.addEventListener("keyup", function (event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("submit").click();
+            }
+        });
+
+        function CopyToClipboard(element) {
+            console.log(element.innerText);
+        }
+
+
+    </script>
+    <script>
+        document.querySelectorAll(".channelInfo").forEach((e) => e.remove());
+    </script>
+    
+</body>
+</html>
