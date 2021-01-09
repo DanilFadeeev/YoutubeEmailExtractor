@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/EmailsList.css" />
+    <link rel="stylesheet" href="css/ProgressBar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,10 +23,15 @@
 
         <input type="text" id="videoId" placeholder="insert video id" />
         <button id="submit" onclick="searchEmails()">Search</button>
+        <div class="progress-bar" id="progress">
+          <span class="bar">
+            <span class="progress"></span>
+          </span>
+        </div>
       </div>
 
-      <!-- exaple of email block
-      <div class="email">
+      <!-- exaple of email block-->
+      <!-- <div class="email">
         <span
           >emailTest@test.test
           <i

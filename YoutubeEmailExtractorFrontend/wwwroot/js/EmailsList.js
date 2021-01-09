@@ -30,7 +30,8 @@ let input = document.querySelector("#videoId");
                     console.log("something went wrong");
                 }
             }).catch(e=>console.log("something went wrong"));
-            setTimeout(function() { AddNewEmails(); }, 5000);
+            setTimeout(function() { AddNewEmails(); }, 1000);
+            document.getElementById("progress").style.display = "inline";
             console.log("searching...");
     }
 
