@@ -1,75 +1,80 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="Button.css" /> -->
     <link rel="stylesheet" href="css/Button2.css" />
     <link rel="stylesheet" href="css/MainButton.css" />
     <link rel="stylesheet" href="css/GlowOnHover.css" />
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div id="BigButton">
-            <button class="MainButton glow-on-hover-red">
-                <a href="#">Youtube Email Extractor. What is it and how to use it?</a>
-            </button>
-        </div>
+      <div id="BigButton">
+        <button class="MainButton glow-on-hover-red">
+          <a href="#">Youtube Email Extractor. What is it and how to use it?</a>
+        </button>
+      </div>
 
-        <div class="BigButton2R">
-            <button class="BigButton2Orange glow-on-hover-orange" onclick="window.location.href='/ChannelList.html'">
-                <a>Get channel Id</a>
-            </button>
+      <div class="BigButton2R">
+        <button
+          class="BigButton2Orange glow-on-hover-orange"
+          onclick="window.location.href='/ChannelList.html'"
+        >
+          <a>Get channel Id</a>
+        </button>
+      </div>
 
-        </div>
+      <div class="BigButton2L">
+        <button
+          class="BigButton2LightGreen glow-on-hover-green"
+          onclick="window.location.href='/ChannelVideos.html'"
+        >
+          <a href="#">Get channel Videos Id's</a>
+        </button>
+      </div>
 
-        <div class="BigButton2L">
-            <button class="BigButton2LightGreen glow-on-hover-green"  onclick="window.location.href='/ChannelVideos.html'">
-                <a href="#">Get channel Videos Id's</a>
-            </button>
-        </div>
+      <div class="BigButton2R">
+        <button
+          class="BigButton2Blue glow-on-hover-blue"
+          onclick="window.location.href = '/EmailsList.html'"
+        >
+          <a href="#">Get emails from video(s)</a>
+        </button>
+      </div>
 
-        <div class="BigButton2R">
-            <button class="BigButton2Purple glow-on-hover-purple">
-                <a href="#">Get video id</a>
-            </button>
+      <div id="about">
+        <div id="test">
+          <span>created by danila fadeev</span>
+          <p></p>
+          <div class="grow-container">
+            <a href="#" class="to-vk circle-button">
+              <i class="fa fa-facebook fa-vk" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="to-reddit circle-button">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
         </div>
-        <div class="BigButton2L">
-            <button class="BigButton2Blue glow-on-hover-blue">
-                <a href="#">Get emails from video(s)</a>
-            </button>
-        </div>
-
-        <div id="about">
-            <div id="test">
-                <span>created by danila fadeev</span>
-                <p></p>
-                <div class="grow-container">
-                    <a href="#" class="to-vk circle-button">
-                        <i class="fa fa-facebook fa-vk" aria-hidden="true"></i>
-                    </a>
-                    <a href="#" class="to-reddit circle-button">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(".cta").click(function () {
-            $(this)
-                .addClass("active")
-                .delay(300)
-                .queue(function (next) {
-                    $(this).removeClass("active");
-                    next();
-                });
-        });
+      $(".cta").click(function () {
+        $(this)
+          .addClass("active")
+          .delay(300)
+          .queue(function (next) {
+            $(this).removeClass("active");
+            next();
+          });
+      });
     </script>
-</body>
+  </body>
 </html>
