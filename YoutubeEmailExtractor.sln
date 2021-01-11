@@ -13,7 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoutubeEmailExtractorFronte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YouTubeApiWrapperTests", "YouTubeApiWriterTests\YouTubeApiWrapperTests.csproj", "{C619E6C4-D59F-4BAF-BFE2-B866501D95B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailExtractorTests", "EmailExtractorTests\EmailExtractorTests.csproj", "{958850E8-99EC-4360-8169-253E294621BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailExtractorTests", "EmailExtractorTests\EmailExtractorTests.csproj", "{958850E8-99EC-4360-8169-253E294621BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{37B030D9-48BF-41B6-84FD-35CC558F4FE7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\clicksearch.png = ..\..\..\Desktop\clicksearch.png
+		..\..\..\Desktop\copyId.png = ..\..\..\Desktop\copyId.png
+		..\..\..\Desktop\OpenExtAndClicGetEmails.png = ..\..\..\Desktop\OpenExtAndClicGetEmails.png
+		..\..\..\Desktop\openVideo.png = ..\..\..\Desktop\openVideo.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
